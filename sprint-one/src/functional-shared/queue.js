@@ -12,7 +12,7 @@ var queueMethods = {
   enqueue: function(value) {
     this[this.tail] = value;
     this.tail++;
-    return this['size']();
+    return this.size();
   },
   dequeue: function() {
     if (this.tail > this.head) {

@@ -18,7 +18,7 @@ var stackMethods = {
   },
   'pop': function() {
     this.count >= 1 ? this.count-- : this.count = 0;
-    var value = this.storage[this.count];
+    var value = this.storage.hasOwnProperty(this.count) ? this.storage[this.count] : 0;
     delete this.storage[this.count];
     return value;
   },
